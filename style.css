@@ -82,7 +82,7 @@ a {
 }
 
 .bk-light {
-    background: #ff0084;
+    background: #f6a700;
 }
 
 .link-dark {
@@ -251,3 +251,72 @@ a {
 }
 
 /* footer */
+
+#mainfooter {
+    padding: 15px 0;
+}
+
+#mainfooter img {
+    height: 30px;
+}
+
+#mainfooter .flex {
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    /* navbar */
+    
+    #navbar {
+        padding: 30px 0;
+    }
+    
+    #navbar .container {
+        flex-direction: column;
+    }
+    
+    /* photos */
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-box-1,
+    .grid-box-2,
+    .grid-box-3,
+    .grid-box-4,
+    .grid-box-5,
+    .grid-box-6 {
+        grid-column: 1; /* Ajustamos todas las grid-box a la primera columna */
+        grid-row: auto; /* Ajustamos las filas según la posición en la columna */
+        padding: 80px 30px;  /* Eliminamos cualquier imagen de fondo si es necesario */
+    }
+    
+    .grid-box-1,
+    .grid-box-4,
+    .grid-box-5 {
+        padding: 80px 30px;
+    }
+    
+    
+    /* footer */
+    
+    #mainfooter {
+        text-align: center;
+    }
+    
+    #mainfooter img {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}
